@@ -118,16 +118,17 @@ void loop() {
   myTime = millis();
   
   // Give a step current
-  if((myTime>3000))   { 
-    mi_neuron[0].s_j = 1;
-    mi_neuron[1].s_j = 1;
-    mi_neuron[2].s_j = 1;
-    mi_neuron[3].s_j = 1;}
-  else {
-    mi_neuron[0].s_j = 0;
-    mi_neuron[1].s_j = 0;
-    mi_neuron[2].s_j = 0;
-    mi_neuron[3].s_j = 0;}
+  for (int i = 0; i < NOMBER_MI_NEURONS; i++)
+  {
+    if ((myTime > 3000))
+    {
+      mi_neuron[i].s_j = 1;
+    }
+    else
+    {
+      mi_neuron[i].s_j = 0;
+    }
+  }
   
   /* Update the neurons output*/
   update_locomotion_network();
