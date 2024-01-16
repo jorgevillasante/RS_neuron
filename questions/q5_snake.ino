@@ -112,36 +112,15 @@ void setup() {
 
   for (int i=0; i<NOMBER_MI_NEURONS; i++){
     mi_neuron[i].a[1] = w_body;
+    mi_neuron[i].a[9] = w_body;
     mi_neuron[i].a[19] = w_body;
-    if(i>=0 && i<=3){
-      mi_neuron[i].a[8] = w_body;
-      mi_neuron[i].a[16-i] = w_side;
-    }
-    else if(i>=4 && i<=7){
-      mi_neuron[i].a[8] = w_body;
-      mi_neuron[i].a[18-i] = w_side;
-    }
-    else if(i>=8 && i<=11){
-      mi_neuron[i].a[12] = w_body;
-      mi_neuron[i].a[17-i] = w_side;
-    }
-    else if(i>=12 && i<=15){
-      mi_neuron[i].a[12] = w_body;
-      mi_neuron[i].a[17-i] = w_side;
-    }
-
-    mi_neuron[0].a[19] = 0;
-    mi_neuron[7].a[1] = 0;
-    mi_neuron[8].a[19] = 0;
-    mi_neuron[15].a[1] = 0;
-
-    mi_neuron[16].a[19] = 0;
-    mi_neuron[19].a[1] = 0;
-
-    mi_neuron[16].a[3] = w_side;
-    mi_neuron[19].a[17] = w_side;
-
   }
+
+  mi_neuron[0].a[1] = 0;
+  mi_neuron[10].a[1] = 0;
+  mi_neuron[9].a[19] = 0;
+  mi_neuron[19].a[19] = 0;
+
   delay(2000);
 }
 
